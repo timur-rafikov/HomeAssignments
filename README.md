@@ -7,5 +7,7 @@ Timur Rafikov
 Artifical Intelligence and Data Science \
 24.Б81-мм
 ## e-mail: 
-st128186@student.spbu.ru
+st128186@student.spbu.ru \
 trafikdev@vk.com
+## tg:
+@trafikprog

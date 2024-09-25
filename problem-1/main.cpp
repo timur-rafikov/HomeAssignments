@@ -7,6 +7,8 @@
 #include <iostream>
 
 int main() {
+	std::string name = "Timur Rafikov";
+	hello(name);
 	sayhello();
 	return 0;
 }

@@ -10,5 +10,5 @@ World". After this reads a string in a cycle and says "Hello, <string>"
 make
 ## Run
 ./app
-# Clean
+## Clean
 make clean

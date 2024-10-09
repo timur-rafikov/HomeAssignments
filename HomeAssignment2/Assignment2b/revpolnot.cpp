@@ -6,15 +6,6 @@
 
 #include "revpolnot.hpp"
 
-std::string rmspaces(std::string& s) { // Removing all spaces in the line
-	std::string res;
-	for (int i = 0; i < (int)s.size(); ++i) {
-		if (s[i] != ' ')
-			res += s[i];
-	}
-	return res;
-}
-
 void push(double *stack, double **p, double el) { // Add an element to the stack and move the pointer
 	*p = *p + 1;
 	**p = el;
@@ -26,30 +17,29 @@ double pop(double *stack, double **p) { // Removing an element from the stack an
 	return res;
 }
 
-bool issign(char c) {
-	return (c == '+' || c == '-' || c == '*' || c == '/');
+bool issign(std::string c) {
+	return (c == "+" || c == "-" || c == "*" || c == "/");
 }
 
-double calc(std::string& s) { // The main function of the algorithm reverse polish notation
+double calc(std::stringstream& stream) { // The main function of the algorithm reverse polish notation
 	double *stack = new double[1000]; // Declaration stack
 	double *p = (stack - 1); // The pointer points to the top of the stack
 
-	for (int i = 0; i < (int)s.size(); ++i) {
-		char c = s[i];
-
+	std::string c;
+	while (stream >> c) {
 		if (!issign(c)) { // If the symbol is a number, then push on the top
-			double el = (double)((int)c - 48);
+			double el = (double)(std::stoi(c));
 			push(stack, &p, el);
 		} else { // Otherwise, we take two elements and perform the operation
 			double a = pop(stack, &p);
 			double b = pop(stack, &p);
 
 			double res = 0.;
-			if (c == '+')
+			if (c == "+")
 				res = b + a;
-			else if (c == '-')
+			else if (c == "-")
 				res = b - a;
-			else if (c == '*')
+			else if (c == "*")
 				res = b * a;
 			else res = b / a;
 			push(stack, &p, res);

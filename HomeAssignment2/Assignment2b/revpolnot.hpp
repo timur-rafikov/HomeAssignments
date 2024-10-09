@@ -8,8 +8,8 @@
 #define REVPOLNOT
 
 #include <string>
+#include <sstream>
 
-std::string rmspaces(std::string& s);
-double calc(std::string& s);
+double calc(std::stringstream& stream);
 
 #endif

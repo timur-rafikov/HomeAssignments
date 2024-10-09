@@ -7,6 +7,9 @@
 #ifndef REVPOLNOT
 #define REVPOLNOT
 
-// functions
+#include <string>
+
+std::string rmspaces(std::string& s);
+double calc(std::string& s);
 
 #endif

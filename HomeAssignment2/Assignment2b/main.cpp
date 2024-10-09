@@ -8,9 +8,11 @@
 #include <iostream>
 #include "revpolnot.hpp"
 
+
 int main() {
 	std::string input;
+	std::getline(std::cin, input);
 	input = rmspaces(input);
-	int result = calc(input);
-	std::cout << result;
+	double result = calc(input);
+	std::cout << "RESULT OF CALCULATION: " << result << '\n';
 }

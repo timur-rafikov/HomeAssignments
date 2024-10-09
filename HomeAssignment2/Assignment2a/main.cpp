@@ -1,3 +1,8 @@
+/* Author: Timur Rafikov
+ * e-mail: st128186@student.spbu.ru
+ * Assignment2a: reading and writing files
+ * 09.10.2024
+ */
 #include <fstream>
 #include <filesystem>
 #include <iostream>

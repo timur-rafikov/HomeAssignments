@@ -12,10 +12,17 @@ Transformer::Transformer(std::string name, uint level, uint strength, uint fuel,
 	_strength = strength;
 	_fuel = fuel;
 	_ammo = ammo;
+	std::cout << "Transformer " << name << " has been created!\n";
 }
 
 Transformer::~Transformer() {
 	std::cout << "Transformer " << _name << " has been eliminated\n";
+}
+
+
+
+void Transformer::setname(std::string name) {
+	_name = name;
 }
 
 void Transformer::setlevel(uint level) {

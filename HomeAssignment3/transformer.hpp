@@ -21,6 +21,7 @@ public:
 	Transformer(std::string name = "Untitled", uint level = 0, uint strength = 0, uint fuel = 0, uint ammo = 0);
 	~Transformer();
 
+	void setname(std::string name);
 	void setlevel(uint level);
 	void setstrength(uint strength);
 	void setfuel(uint fuel);

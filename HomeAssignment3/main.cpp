@@ -6,13 +6,14 @@
 
 #include "transformer.hpp"
 #include "autobot.hpp"
+#include "decepticon.hpp"
 
 int main() {
 	Transformer hero;
 	hero.fire();
 	hero.jump();
+	hero.setfuel(70);	
 	std::cout << hero.getammo() << '\n';
-	hero.setfuel(70);
 	std::cout << hero.getfuel() << '\n';
 	std::cout << hero.getname() << '\n';
 
@@ -25,6 +26,22 @@ int main() {
 	std::cout << hero2.getColor() << '\n';
 	std::cout << hero2.getname() << '\n';
 	hero2.fire(); 
+
+	std::cout << '\n';
+
+	Decepticon enemy;
+	enemy.setname("Enemy");
+	enemy.fire();
+	enemy.jump();
+	enemy.setLengthOfBlade(20);
+	enemy.setPowerOfBlade(300);
+	std::cout << enemy.getname() << '\n';
+	std::cout << enemy.getPowerOfBlade() << '\n';
+	std::cout << enemy.getLengthOfBlade() << '\n';
+
+
+
+	std::cout << '\n';
 
 	return 0;
 }

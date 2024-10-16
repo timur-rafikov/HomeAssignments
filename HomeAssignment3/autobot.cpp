@@ -6,9 +6,10 @@
 
 #include "autobot.hpp"
 
-Autobot::Autobot(std::string name, uint powerOfBlaster) {
+Autobot::Autobot(std::string name, std::string color, uint powerOfBlaster) {
 	setname(name);
 	_powerOfBlaster = powerOfBlaster;
+	_color = color;
 	std::cout << "Autobot " << name << " has been created!\n";
 }
 

@@ -1,7 +1,7 @@
 all: app
 
-app: main.o transformer.o autobot.o decepticon.o
-	g++ main.o transformer.o autobot.o decepticon.o -o app
+app: main.o transformer.o autobot.o decepticon.o minicon.o
+	g++ main.o transformer.o autobot.o decepticon.o minicon.o -o app
 
 main.o: main.cpp
 	g++ -c main.cpp
@@ -14,6 +14,9 @@ autobot.o:
 
 decepticon.o:
 	g++ -c decepticon.cpp
+
+minicon.o:
+	g++ -c minicon.cpp
 
 clean:
 	rm -rf *.o app

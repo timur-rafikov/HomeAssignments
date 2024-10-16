@@ -7,6 +7,7 @@
 #include "transformer.hpp"
 #include "autobot.hpp"
 #include "decepticon.hpp"
+#include "minicon.hpp"
 
 int main() {
 	Transformer hero;
@@ -39,6 +40,13 @@ int main() {
 	std::cout << enemy.getPowerOfBlade() << '\n';
 	std::cout << enemy.getLengthOfBlade() << '\n';
 
+	std::cout << '\n';
+
+	Minicon builder("Barak");
+	builder.setSize(100);
+	builder.setEnergy(1000);
+	std::cout << builder.getname() << '\n';
+	std::cout << builder.getEnergy() << '\n';
 
 
 	std::cout << '\n';

@@ -14,7 +14,7 @@ private:
 	std::string _color;
 	uint _powerOfBlaster;
 public:
-	Autobot(std::string name = "Unknown", std::string color = "Unknown", uint powerOfBlaster = 0);
+	Autobot(const std::string &name = "Unknown", const std::string &color = "Unknown", uint powerOfBlaster = 0);
 
 	void setPowerOfBlaster(uint powerOfBlaster);
 	void setColor(std::string color);

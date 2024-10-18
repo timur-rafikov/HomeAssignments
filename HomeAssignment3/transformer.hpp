@@ -19,6 +19,7 @@ private:
 	uint _ammo;
 public:
 	Transformer();
+	Transformer(const std::string &name);
 	Transformer(const std::string &name, uint level, uint strength, uint fuel, uint ammo);
 	~Transformer();
 

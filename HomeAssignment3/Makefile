@@ -3,7 +3,7 @@ all: app
 app: main.o transformer.o autobot.o decepticon.o minicon.o
 	g++ -g main.o transformer.o autobot.o decepticon.o minicon.o -o app
 
-main.o: main.cpp transformer.hpp autobot.hppdecepticon.hpp minicon.hpp
+main.o: main.cpp transformer.hpp autobot.hpp decepticon.hpp minicon.hpp
 	g++ -c -g main.cpp
 
 transformer.o: transformer.cpp transformer.hpp

@@ -18,7 +18,8 @@ private:
 	uint _fuel;
 	uint _ammo;
 public:
-	Transformer(std::string name = "Untitled", uint level = 0, uint strength = 0, uint fuel = 0, uint ammo = 0);
+	Transformer();
+	Transformer(const std::string &name, uint level, uint strength, uint fuel, uint ammo);
 	~Transformer();
 
 	void setname(std::string name);

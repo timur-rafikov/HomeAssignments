@@ -6,10 +6,11 @@
 
 #include "autobot.hpp"
 
-Autobot::Autobot(std::string name, std::string color, uint powerOfBlaster) {
-	setname(name);
-	_powerOfBlaster = powerOfBlaster;
-	_color = color;
+Autobot::Autobot(const std::string &name, const std::string &color, uint powerOfBlaster) :
+	Transformer(name),
+	_color(color),
+	_powerOfBlaster(powerOfBlaster)
+{
 	std::cout << "Autobot " << name << " has been created!\n";
 }
 
@@ -18,9 +19,9 @@ void Autobot::setPowerOfBlaster(uint powerOfBlaster) {
 	_powerOfBlaster = powerOfBlaster;
 }
 
-void Autobot::setColor(std::string color) {
-	_color = color;
-}
+void Autobot::setColor(const std::string &color) : 
+	_color(color);
+{}
 
 
 uint Autobot::getPowerOfBlaster() {

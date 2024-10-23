@@ -1,21 +1,21 @@
 all: app
 
 app: main.o transformer.o autobot.o decepticon.o minicon.o
-	g++ main.o transformer.o autobot.o decepticon.o minicon.o -o app
+	g++ -g main.o transformer.o autobot.o decepticon.o minicon.o -o app
 
-main.o: main.cpp
-	g++ -c main.cpp
+main.o: main.cpp transformer.hpp autobot.hpp decepticon.hpp minicon.hpp
+	g++ -c -g main.cpp
 
-transformer.o: transformer.cpp
-	g++ -c transformer.cpp
+transformer.o: transformer.cpp transformer.hpp
+	g++ -c -g transformer.cpp
 
-autobot.o:
+autobot.o: autobot.cpp autobot.hpp transformer.hpp
 	g++ -c autobot.cpp
 
-decepticon.o:
+decepticon.o: decepticon.cpp decepticon.hpp transformer.hpp
 	g++ -c decepticon.cpp
 
-minicon.o:
+minicon.o: minicon.cpp minicon.hpp transformer.hpp
 	g++ -c minicon.cpp
 
 clean:

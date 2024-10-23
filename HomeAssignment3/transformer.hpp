@@ -19,22 +19,22 @@ private:
 	uint _ammo;
 public:
 	//Transformer(std::string name = "Untitled", uint level = 0, uint strength = 0, uint fuel = 0, uint ammo = 0);
-	Transformer(const std::string &name, uint level, uint strength, uint fuel, uint ammo);
+	Transformer(const std::string &name, const uint &level, const uint &strength, const uint &fuel, const uint &ammo);
 	Transformer(const std::string &name);
 	Transformer();
 	~Transformer();
 
-	void setname(std::string name);
-	void setlevel(uint level);
-	void setstrength(uint strength);
-	void setfuel(uint fuel);
-	void setammo(uint ammo);
+	void setName(const std::string &name);
+	void setLevel(const uint &level);
+	void setStrength(const uint &strength);
+	void setFuel(const uint &fuel);
+	void setAmmo(const uint &ammo);
 
-	std::string getname();
-	uint getlevel();
-	uint getstrength();
-	uint getfuel();
-	uint getammo();
+	std::string getName();
+	uint getLevel();
+	uint getStrength();
+	uint getFuel();
+	uint getAmmo();
 
 	void fire();
 	void move();

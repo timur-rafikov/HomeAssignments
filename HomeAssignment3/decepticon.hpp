@@ -14,10 +14,12 @@ private:
 	uint _powerOfBlade;
 	uint _lengthOfBlade;
 public:
-	Decepticon(std::string name = "Unknown", uint powerOfBlade = 0, uint lengthOfBlade = 20);
+	Decepticon(const std::string &name, const uint &powerOfBlade, const uint &lengthOfBlade);
+	Decepticon(const std::string &name);
+	Decepticon();
 
-	void setPowerOfBlade(uint powerOfBlade);
-	void setLengthOfBlade(uint lengthOfBlade);
+	void setPowerOfBlade(const uint &powerOfBlade);
+	void setLengthOfBlade(const uint &lengthOfBlade);
 
 	uint getPowerOfBlade();
 	uint getLengthOfBlade();

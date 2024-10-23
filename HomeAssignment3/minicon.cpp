@@ -6,19 +6,29 @@
 
 #include "minicon.hpp"
 
-Minicon::Minicon(std::string name, uint energy, uint size) {
-	setname(name);
-	_energy = energy;
-	_size = size;
+Minicon::Minicon(const std::string &name, const uint &energy, const uint &size) :
+	Transformer(name),
+	_energy(energy),
+	_size(size)	
+{
 	std::cout << "Minicon " << name << " has been created!\n";
 }
 
+Minicon::Minicon(const std::string &name) :
+	Minicon(name, 0, 0)
+{}
 
-void Minicon::setEnergy(uint energy) {
+Minicon::Minicon() :
+	Minicon("Untitled", 0, 0)
+{}
+
+
+
+void Minicon::setEnergy(const uint &energy) {
 	_energy = energy;
 }
 
-void Minicon::setSize(uint size) {
+void Minicon::setSize(const uint &size) {
 	_size = size;
 }
 

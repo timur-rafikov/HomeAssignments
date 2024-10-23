@@ -13,10 +13,10 @@ int main() {
 	Transformer hero;
 	hero.fire();
 	hero.jump();
-	hero.setfuel(70);	
-	std::cout << hero.getammo() << '\n';
-	std::cout << hero.getfuel() << '\n';
-	std::cout << hero.getname() << '\n';
+	hero.setFuel(70);	
+	std::cout << hero.getAmmo() << '\n';
+	std::cout << hero.getFuel() << '\n';
+	std::cout << hero.getName() << '\n';
 
 	std::cout << '\n';
 
@@ -25,18 +25,18 @@ int main() {
 	hero2.setColor("purple");
 	std::cout << hero2.getPowerOfBlaster() << '\n';
 	std::cout << hero2.getColor() << '\n';
-	std::cout << hero2.getname() << '\n';
+	std::cout << hero2.getName() << '\n';
 	hero2.fire(); 
 
 	std::cout << '\n';
 
 	Decepticon enemy;
-	enemy.setname("Enemy");
+	enemy.setName("Enemy");
 	enemy.fire();
 	enemy.jump();
 	enemy.setLengthOfBlade(20);
 	enemy.setPowerOfBlade(300);
-	std::cout << enemy.getname() << '\n';
+	std::cout << enemy.getName() << '\n';
 	std::cout << enemy.getPowerOfBlade() << '\n';
 	std::cout << enemy.getLengthOfBlade() << '\n';
 
@@ -45,7 +45,7 @@ int main() {
 	Minicon builder("Barak");
 	builder.setSize(100);
 	builder.setEnergy(1000);
-	std::cout << builder.getname() << '\n';
+	std::cout << builder.getName() << '\n';
 	std::cout << builder.getEnergy() << '\n';
 
 

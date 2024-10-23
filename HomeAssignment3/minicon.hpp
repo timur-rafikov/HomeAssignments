@@ -14,10 +14,12 @@ private:
 	uint _energy;
 	uint _size;
 public:
-	Minicon(std::string name = "Unknown", uint energy = 0, uint size = 160);
+	Minicon(const std::string &name, const uint &energy, const uint &size);
+	Minicon(const std::string &name);
+	Minicon();
 
-	void setEnergy(uint energy);
-	void setSize(uint size);
+	void setEnergy(const uint &energy);
+	void setSize(const uint &size);
 
 	uint getEnergy();
 	uint getSize();

@@ -14,7 +14,7 @@
 	_ammo = ammo;
 	std::cout << "Transformer " << name << " has been created!\n";
 }*/
-Transformer::Transformer(const std::string &name, uint level, uint strength, uint fuel, uint ammo) :
+Transformer::Transformer(const std::string &name, const uint &level, const uint &strength, const uint &fuel, const uint &ammo) :
 	_name(name),
 	_level(level),
 	_strength(strength),
@@ -38,45 +38,45 @@ Transformer::~Transformer() {
 
 
 
-void Transformer::setname(std::string name) {
+void Transformer::setName(const std::string &name) {
 	_name = name;
 }
 
-void Transformer::setlevel(uint level) {
+void Transformer::setLevel(const uint &level) {
 	_level = level;
 }
 
-void Transformer::setstrength(uint strength) {
+void Transformer::setStrength(const uint &strength) {
 	_strength = strength;
 }
 
-void Transformer::setfuel(uint fuel) {
+void Transformer::setFuel(const uint &fuel) {
 	_fuel = fuel;
 }
 
-void Transformer::setammo(uint ammo) {
+void Transformer::setAmmo(const uint &ammo) {
 	_ammo = ammo;
 }
 
 
 
-std::string Transformer::getname() {
+std::string Transformer::getName() {
 	return _name;
 }
 
-uint Transformer::getlevel() {
+uint Transformer::getLevel() {
 	return _level;
 }
 
-uint Transformer::getstrength() {
+uint Transformer::getStrength() {
 	return _strength;
 }
 
-uint Transformer::getfuel() {
+uint Transformer::getFuel() {
 	return _fuel;
 }
 
-uint Transformer::getammo() {
+uint Transformer::getAmmo() {
 	return _ammo;
 }
 

@@ -6,18 +6,28 @@
 
 #include "decepticon.hpp"
 
-Decepticon::Decepticon(std::string name, uint powerOfBlade, uint lengthOfBlade) {
-	_powerOfBlade = powerOfBlade;
-	_lengthOfBlade = lengthOfBlade;
+Decepticon::Decepticon(const std::string &name, const uint &powerOfBlade, const uint &lengthOfBlade) :
+	Transformer(name),	
+	_powerOfBlade(powerOfBlade),
+	_lengthOfBlade(lengthOfBlade)
+{
 	std::cout << "Decepticon " << name << " has been created!\n";
 }
 
+Decepticon::Decepticon(const std::string &name) :
+	Decepticon(name, 0, 0)
+{}
 
-void Decepticon::setPowerOfBlade(uint powerOfBlade) {
+Decepticon::Decepticon() :
+	Decepticon("Untitled", 0, 0)
+{}
+
+
+void Decepticon::setPowerOfBlade(const uint &powerOfBlade) {
 	_powerOfBlade = powerOfBlade;
 }
 
-void Decepticon::setLengthOfBlade(uint lengthOfBlade) {
+void Decepticon::setLengthOfBlade(const uint &lengthOfBlade) {
 	_lengthOfBlade = lengthOfBlade;
 }
 

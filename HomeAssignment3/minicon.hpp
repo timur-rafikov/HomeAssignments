@@ -8,15 +8,18 @@
 #define MINICON
 
 #include "transformer.hpp"
+#include "instrument.hpp"
 
 class Minicon: public Transformer {
 private:
+	Instrument* _pickaxe;
 	uint _energy;
 	uint _size;
 public:
-	Minicon(const std::string &name, const uint &energy, const uint &size);
-	Minicon(const std::string &name);
-	Minicon();
+	Minicon(const std::string &name, Instrument* pickaxe, const uint &energy, const uint &size);
+	Minicon(const std::string &name, Instrument* pickaxe);
+
+	void work();
 
 	void setEnergy(const uint &energy);
 	void setSize(const uint &size);

@@ -6,22 +6,23 @@
 
 #include "minicon.hpp"
 
-Minicon::Minicon(const std::string &name, const uint &energy, const uint &size) :
+Minicon::Minicon(const std::string &name, Instrument* pickaxe, const uint &energy, const uint &size) :
 	Transformer(name),
+	_pickaxe(pickaxe),
 	_energy(energy),
 	_size(size)	
 {
 	std::cout << "Minicon " << name << " has been created!\n";
 }
 
-Minicon::Minicon(const std::string &name) :
-	Minicon(name, 0, 0)
+Minicon::Minicon(const std::string &name, Instrument* pickaxe) :
+	Minicon(name, pickaxe, 0, 0)
 {}
 
-Minicon::Minicon() :
-	Minicon("Untitled", 0, 0)
-{}
 
+void Minicon::work() {
+	_pickaxe->use();
+}
 
 
 void Minicon::setEnergy(const uint &energy) {

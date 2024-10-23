@@ -42,9 +42,13 @@ int main() {
 
 	std::cout << '\n';
 
-	Minicon builder("Barak");
+	Instrument pickaxe(100, 50);
+
+	Minicon builder("Barak", &pickaxe);
 	builder.setSize(100);
 	builder.setEnergy(1000);
+	builder.work();
+	builder.work();
 	std::cout << builder.getName() << '\n';
 	std::cout << builder.getEnergy() << '\n';
 

@@ -19,7 +19,7 @@ public:
 	Minicon(const std::string &name, Instrument* pickaxe, const uint &energy, const uint &size);
 	Minicon(const std::string &name, Instrument* pickaxe);
 
-	void work();
+	bool work();
 
 	void setEnergy(const uint &energy);
 	void setSize(const uint &size);

@@ -82,14 +82,14 @@ uint Transformer::getAmmo() {
 
 
 
-void Transformer::fire() {
-	return;
+bool Transformer::fire() {
+	return true;
 }
 
-void Transformer::move() {
-	return;
+bool Transformer::move() {
+	return true;
 }
 
-void Transformer::jump() {
-	return;
+bool Transformer::jump() {
+	return true;
 }

@@ -17,7 +17,7 @@ public:
 	Instrument(const uint &endurance, const uint &effect);
 	Instrument();
 
-	void use();
+	bool use();
 
 	void setEndurance(const uint &setEndurance);
 	void setEffect(const uint &effect);

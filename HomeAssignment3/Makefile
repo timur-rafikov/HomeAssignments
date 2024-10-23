@@ -1,7 +1,8 @@
 all: app
 
 app: main.o transformer.o autobot.o decepticon.o minicon.o blade.o blaster.o instrument.o
-	g++ -g main.o transformer.o autobot.o decepticon.o minicon.o blade.o blaster.o instrument.o -o app
+	g++ -g main.o transformer.o autobot.o decepticon.o minicon.o blade.o blaster.o instrument.o -o app -lgtest -lgtest_main -lpthread
+
 
 main.o: main.cpp transformer.hpp autobot.hpp decepticon.hpp minicon.hpp blade.hpp blaster.hpp instrument.hpp
 	g++ -c -g main.cpp
@@ -29,3 +30,10 @@ instrument.o: instrument.cpp
 
 clean:
 	rm -rf *.o app
+
+
+#test_app: test.o transformer.o autobot.o decepticon.o minicon.o blade.o blaster.o instrument.o
+#	g++ -g test.o transformer.o autobot.o decepticon.o minicon.o blade.o blaster.o instrument.o -o test
+
+#test.o: test.cpp transformer.hpp autobot.hpp decepticon.hpp minicon.hpp blade.hpp blaster.hpp instrument.hpp
+#	g++ -c -g test.cpp

@@ -17,8 +17,9 @@ Instrument::Instrument() :
 {}
 
 
-void Instrument::use() {
+bool Instrument::use() {
 	std::cout << "Instrument has been used\n";
+	return true;
 }
 
 

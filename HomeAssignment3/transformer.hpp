@@ -36,9 +36,9 @@ public:
 	uint getFuel();
 	uint getAmmo();
 
-	void fire();
-	void move();
-	void jump();
+	bool fire();
+	bool move();
+	bool jump();
 };
 
 #endif

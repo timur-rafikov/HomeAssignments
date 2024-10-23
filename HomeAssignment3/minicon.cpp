@@ -20,8 +20,8 @@ Minicon::Minicon(const std::string &name, Instrument* pickaxe) :
 {}
 
 
-void Minicon::work() {
-	_pickaxe->use();
+bool Minicon::work() {
+	return _pickaxe->use();
 }
 
 

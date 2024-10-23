@@ -17,7 +17,7 @@ public:
 	Autobot(const std::string &name = "Unknown", const std::string &color = "Unknown", uint powerOfBlaster = 0);
 
 	void setPowerOfBlaster(uint powerOfBlaster);
-	void setColor(std::string color);
+	void setColor(const std::string &color);
 
 	uint getPowerOfBlaster();
 	std::string getColor();

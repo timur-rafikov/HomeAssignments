@@ -19,9 +19,9 @@ void Autobot::setPowerOfBlaster(uint powerOfBlaster) {
 	_powerOfBlaster = powerOfBlaster;
 }
 
-void Autobot::setColor(const std::string &color) : 
-	_color(color);
-{}
+void Autobot::setColor(const std::string &color) {
+	_color = color;
+}
 
 
 uint Autobot::getPowerOfBlaster() {

@@ -35,9 +35,9 @@ int main() {
 	enemy.fire();
 	enemy.jump();
 	enemy.setLengthOfBlade(20);
-	enemy.setPowerOfBlade(300);
+	enemy.setSharpnessOfBlade(300);
 	std::cout << enemy.getName() << '\n';
-	std::cout << enemy.getPowerOfBlade() << '\n';
+	std::cout << enemy.getSharpnessOfBlade() << '\n';
 	std::cout << enemy.getLengthOfBlade() << '\n';
 
 	std::cout << '\n';

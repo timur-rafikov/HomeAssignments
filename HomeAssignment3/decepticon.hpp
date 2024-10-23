@@ -8,20 +8,20 @@
 #define DECEPTICON
 
 #include "transformer.hpp"
+#include "blade.hpp"
 
 class Decepticon: public Transformer {
 private:
-	uint _powerOfBlade;
-	uint _lengthOfBlade;
+	Blade _sword;
 public:
-	Decepticon(const std::string &name, const uint &powerOfBlade, const uint &lengthOfBlade);
+	Decepticon(const std::string &name, const uint &sharpnessOfBlade, const uint &lengthOfBlade);
 	Decepticon(const std::string &name);
 	Decepticon();
 
-	void setPowerOfBlade(const uint &powerOfBlade);
+	void setSharpnessOfBlade(const uint &sharpnessOfBlade);
 	void setLengthOfBlade(const uint &lengthOfBlade);
 
-	uint getPowerOfBlade();
+	uint getSharpnessOfBlade();
 	uint getLengthOfBlade();
 };
 

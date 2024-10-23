@@ -1,8 +1,9 @@
-# Assignment2b
+# Assignment3
 ## Author
 Рафиков Тимур Ришатович, группа 24.Б81-мм
 ## Contacts
-st128186@student.spbu.ru
+st128186@student.spbu.ru  
+@trafikprog
 ## Description
 Four classes are demonstrated, three of which (Autobot, Decepticon, Minecon) are inherited from the Transformer class.  
  Each class corresponds to cpp (implementation) and hpp (header) files.  

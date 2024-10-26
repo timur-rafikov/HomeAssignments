@@ -1,39 +1,52 @@
-all: app
+PROJECT = app
 
-app: main.o transformer.o autobot.o decepticon.o minicon.o blade.o blaster.o instrument.o
-	g++ -g main.o transformer.o autobot.o decepticon.o minicon.o blade.o blaster.o instrument.o -o app -lgtest -lgtest_main -lpthread
+LIBPROJECT = $(PROJECT).a
 
+TESTPROJECT = test-$(PROJECT)
 
-main.o: main.cpp transformer.hpp autobot.hpp decepticon.hpp minicon.hpp blade.hpp blaster.hpp instrument.hpp
-	g++ -c -g main.cpp
+CXX = g++
 
-transformer.o: transformer.cpp transformer.hpp
-	g++ -c -g transformer.cpp
+A = ar
 
-autobot.o: autobot.cpp autobot.hpp transformer.hpp blaster.hpp
-	g++ -c -g autobot.cpp
+AFLAGS = rsv
 
-decepticon.o: decepticon.cpp decepticon.hpp transformer.hpp blade.hpp
-	g++ -c -g decepticon.cpp
+CXXFLAGS = -I. -std=c++17 -Wall -g -fPIC
 
-minicon.o: minicon.cpp minicon.hpp transformer.hpp instrument.hpp
-	g++ -c -g minicon.cpp
+LDXXFLAGS = $(CXXFLAGS) -L. -l:$(LIBPROJECT)
 
-blade.o: blade.cpp
-	g++ -c -g blade.cpp
+LDGTESTFLAGS = $(LDXXFLAGS) -lgtest -lgtest_main -lpthread
 
-blaster.o: blaster.cpp
-	g++ -c -g blaster.cpp
+DEPS = $(wildcard *.hpp)
+SRC = $(filter-out main.cpp, $(wildcard *.cpp))
+OBJ = $(patsubst %.cpp, %.o, $(SRC))
 
-instrument.o: instrument.cpp
-	g++ -c -g instrument.cpp
+TEST-OBJ = test.o
+
+.PHONY: default
+
+default: all;
+
+%.o: %.cpp $(DEPS)
+	$(CXX) -c -o $@ $< $(CXXFLAGS)
+
+$(LIBPROJECT) : $(OBJ)
+	$(A) $(AFLAGS) $@ $^
+
+$(PROJECT) : main.o $(LIBPROJECT)
+	$(CXX) -o $@ main.o $(LDXXFLAGS)
+
+$(TESTPROJECT) : $(LIBPROJECT) $(TESTOBJ)
+	$(CXX) test.o -o $@ $(LDGTESTFLAGS)
+
+test: $(TESTPROJECT)
+
+app: $(PROJECT)
+
+all:
+	make app
+	make test
+
+.PHONY: clean
 
 clean:
-	rm -rf *.o app
-
-
-#test_app: test.o transformer.o autobot.o decepticon.o minicon.o blade.o blaster.o instrument.o
-#	g++ -g test.o transformer.o autobot.o decepticon.o minicon.o blade.o blaster.o instrument.o -o test
-
-#test.o: test.cpp transformer.hpp autobot.hpp decepticon.hpp minicon.hpp blade.hpp blaster.hpp instrument.hpp
-#	g++ -c -g test.cpp
+	rm $(PROJECT) $(TESTPROJECT) $(LIBPROJECT) *.o 

@@ -4,18 +4,12 @@
  * 23.10.2024
  */
 
-#include <gtest/gtest.h>
-
 #include "transformer.hpp"
 #include "autobot.hpp"
 #include "decepticon.hpp"
 #include "minicon.hpp"
 
-#include "test.h"
-
 int main() {
-	/*
-	
 	Transformer hero;
 	hero.fire();
 	hero.jump();
@@ -62,9 +56,5 @@ int main() {
 
 	std::cout << '\n';
 
-	*/
-
-	testing::InitGoogleTest();
-
-	return RUN_ALL_TESTS();
+	return 0;
 }

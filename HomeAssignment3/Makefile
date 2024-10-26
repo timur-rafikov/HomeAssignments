@@ -36,7 +36,7 @@ $(PROJECT) : main.o $(LIBPROJECT)
 	$(CXX) -o $@ main.o $(LDXXFLAGS)
 
 $(TESTPROJECT) : $(LIBPROJECT) $(TESTOBJ)
-	$(CXX) test.o -o $@ $(LDGTESTFLAGS)
+	$(CXX) $(TEST-OBJ) -o $@ $(LDGTESTFLAGS)
 
 test: $(TESTPROJECT)
 

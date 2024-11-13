@@ -138,3 +138,44 @@ TEST(Minicon, CheckOutput) {
 
 	EXPECT_EQ(s, "Barak 1000 100");
 }
+
+TEST(Transformer, CheckComparison) {
+	Transformer trans1("cplusplus");
+	trans1.setStrength(1000);
+	Transformer trans2("python");
+	trans2.setStrength(5000);
+
+	ASSERT_TRUE(trans1 < trans2);
+}
+
+TEST(Autobot, CheckComparison) {
+	Autobot atbot1;
+	atbot1.setPowerOfBlaster(100);
+	Autobot atbot2;
+	atbot2.setPowerOfBlaster(200);
+
+	ASSERT_FALSE(atbot1 > atbot2);
+}
+
+TEST(Decepticon, CheckComparison) {
+	Decepticon dec1;
+	dec1.setSharpnessOfBlade(2);
+	dec1.setLengthOfBlade(5);
+	Decepticon dec2;
+	dec2.setSharpnessOfBlade(3);
+	dec2.setLengthOfBlade(3);
+
+	ASSERT_TRUE(dec1 > dec2);
+}
+
+TEST(Minicon, CheckComparison) {
+	Instrument pickaxe2(100, 50);
+	Minicon minc1("Barak1", &pickaxe2);
+	minc1.setEnergy(50);
+	minc1.setSize(2);
+	Minicon minc2("Barak2", &pickaxe2);
+	minc2.setEnergy(33);
+	minc2.setSize(3);
+
+	ASSERT_FALSE(minc2 > minc1);
+}

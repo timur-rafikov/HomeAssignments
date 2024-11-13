@@ -18,6 +18,9 @@ public:
 	Decepticon(const std::string &name);
 	Decepticon();
 
+	bool operator<(const Decepticon& other) const;
+	bool operator>(const Decepticon& other) const;
+
 	void setSharpnessOfBlade(const uint &sharpnessOfBlade);
 	void setLengthOfBlade(const uint &lengthOfBlade);
 

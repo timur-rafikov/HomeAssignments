@@ -20,6 +20,15 @@ Minicon::Minicon(const std::string &name, Instrument* pickaxe) :
 {}
 
 
+bool Minicon::operator<(const Minicon& other) const {
+	return (_energy * _size) < (other.getEnergy() * other.getSize());
+}
+
+bool Minicon::operator>(const Minicon& other) const {
+	return (_energy * _size) > (other.getEnergy() * other.getSize());
+}
+
+
 bool Minicon::work() {
 	return _pickaxe->use();
 }

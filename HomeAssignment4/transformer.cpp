@@ -38,6 +38,16 @@ Transformer::~Transformer() {
 
 
 
+bool Transformer::operator<(const Transformer& other) const {
+	return _strength < other.getStrength();
+}
+
+bool Transformer::operator>(const Transformer& other) const {
+	return _strength > other.getStrength();
+}
+
+
+
 void Transformer::setName(const std::string &name) {
 	_name = name;
 }

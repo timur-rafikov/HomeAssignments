@@ -22,6 +22,15 @@ Decepticon::Decepticon() :
 {}
 
 
+bool Decepticon::operator<(const Decepticon& other) const {
+	return (_sword.getSharpness() * _sword.getLength()) < (other.getSharpnessOfBlade() * other.getLengthOfBlade());
+}
+
+bool Decepticon::operator>(const Decepticon& other) const {
+	return (_sword.getSharpness() * _sword.getLength()) > (other.getSharpnessOfBlade() * other.getLengthOfBlade());
+}
+
+
 void Decepticon::setSharpnessOfBlade(const uint &sharpnessOfBlade) {
 	_sword.setSharpness(sharpnessOfBlade);
 }

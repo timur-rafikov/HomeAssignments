@@ -23,6 +23,15 @@ Autobot::Autobot() :
 {}
 
 
+bool Autobot::operator<(const Autobot& other) const {
+	return _weapon.getPower() < other.getPowerOfBlaster();
+}
+
+bool Autobot::operator>(const Autobot& other) const {
+	return _weapon.getPower() > other.getPowerOfBlaster();
+}
+
+
 
 void Autobot::setPowerOfBlaster(const uint &powerOfBlaster) {
 	_weapon.setPower(powerOfBlaster);

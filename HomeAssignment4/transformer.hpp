@@ -24,6 +24,9 @@ public:
 	Transformer();
 	~Transformer();
 
+	bool operator<(const Transformer& other) const;
+	bool operator>(const Transformer& other) const;
+
 	void setName(const std::string &name);
 	void setLevel(const uint &level);
 	void setStrength(const uint &strength);

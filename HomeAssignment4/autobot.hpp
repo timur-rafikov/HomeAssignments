@@ -19,6 +19,9 @@ public:
 	Autobot(const std::string &name);
 	Autobot();
 
+	bool operator<(const Autobot& other) const;
+	bool operator>(const Autobot& other) const;
+
 	void setPowerOfBlaster(const uint &powerOfBlaster);
 	void setCapacityOfBlaster(const uint &capacityOfBlaster);
 	void setColor(const std::string &color);

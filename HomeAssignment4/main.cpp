@@ -10,14 +10,12 @@
 #include "minicon.hpp"
 
 int main() {
-	/*
+	
 	Transformer hero;
 	hero.fire();
 	hero.jump();
 	hero.setFuel(70);	
-	std::cout << hero.getAmmo() << '\n';
-	std::cout << hero.getFuel() << '\n';
-	std::cout << hero.getName() << '\n';
+	std::cout << hero << '\n';
 
 	std::cout << '\n';
 
@@ -25,11 +23,8 @@ int main() {
 	hero2.setPowerOfBlaster(100);
 	hero2.setColor("purple");
 	hero2.fire(); 
-	std::cout << hero2.getPowerOfBlaster() << '\n';
-	std::cout << hero2.getColor() << '\n';
-	std::cout << hero2.getName() << '\n';
+	std::cout << hero2 << '\n';
 	
-
 	std::cout << '\n';
 
 	Decepticon enemy;
@@ -38,9 +33,7 @@ int main() {
 	enemy.jump();
 	enemy.setLengthOfBlade(20);
 	enemy.setSharpnessOfBlade(300);
-	std::cout << enemy.getName() << '\n';
-	std::cout << enemy.getSharpnessOfBlade() << '\n';
-	std::cout << enemy.getLengthOfBlade() << '\n';
+	std::cout << enemy << '\n';
 
 	std::cout << '\n';
 
@@ -51,22 +44,9 @@ int main() {
 	builder.setEnergy(1000);
 	builder.work();
 	builder.work();
-	std::cout << builder.getName() << '\n';
-	std::cout << builder.getEnergy() << '\n';
-
+	std::cout << builder << '\n';
 
 	std::cout << '\n';
-	*/
-
-	Transformer transf("Maksim Tetuchin");
-	transf.setFuel(1000);
-	std::cout << transf << '\n'; 
-
-	std::cout << '\n';
-
-	Autobot atbot("Timur Rafikov");
-	atbot.setColor("orange");
-	std::cout << atbot << '\n';
 
 	return 0;
 }

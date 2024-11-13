@@ -34,10 +34,19 @@ void Minicon::setSize(const uint &size) {
 }
 
 
-uint Minicon::getEnergy() {
+uint Minicon::getEnergy() const {
 	return _energy;
 }
 
-uint Minicon::getSize() {
+uint Minicon::getSize() const {
 	return _size;
+}
+
+
+std::ostream& operator<<(std::ostream& os, const Minicon& minc) {
+	os << minc.getName() << ' ';
+	os << minc.getEnergy() << ' ';
+	os << minc.getSize();
+
+	return os;
 }

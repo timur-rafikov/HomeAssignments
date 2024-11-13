@@ -31,10 +31,18 @@ void Decepticon::setLengthOfBlade(const uint &lengthOfBlade) {
 }
 
 
-uint Decepticon::getSharpnessOfBlade() {
+uint Decepticon::getSharpnessOfBlade() const {
 	return _sword.getSharpness();
 }
 
-uint Decepticon::getLengthOfBlade() {
+uint Decepticon::getLengthOfBlade() const {
 	return _sword.getLength();
+}
+
+std::ostream& operator<<(std::ostream& os, const Decepticon& dec) {
+	os << dec.getName() << ' ';
+	os << dec.getSharpnessOfBlade() << ' ';
+	os << dec.getLengthOfBlade();
+
+	return os;
 }

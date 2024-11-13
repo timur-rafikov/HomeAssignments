@@ -24,8 +24,10 @@ public:
 	void setEnergy(const uint &energy);
 	void setSize(const uint &size);
 
-	uint getEnergy();
-	uint getSize();
+	uint getEnergy() const;
+	uint getSize() const;
 };
+
+std::ostream& operator<<(std::ostream& os, const Minicon& minc);
 
 #endif

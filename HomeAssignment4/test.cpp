@@ -5,6 +5,7 @@
  */
 
 #include <gtest/gtest.h>
+#include <sstream>
 
 #include "transformer.hpp"
 #include "autobot.hpp"
@@ -78,4 +79,62 @@ TEST(Minicon, CheckNameEnergy) {
 TEST(Instrument, CheckUse) {
 	Instrument axe(200, 20);
 	ASSERT_TRUE(axe.use());
+}
+
+TEST(Transformer, CheckOutput) {
+	Transformer hero;
+	hero.fire();
+	hero.jump();
+	hero.setFuel(70);
+
+	std::ostringstream strs;
+	strs << hero;
+	std::string s = strs.str();
+
+	EXPECT_EQ(s, "Untitled 0 0 70 0");
+}
+
+
+TEST(Autobot, CheckOutput) {
+	Autobot hero2("Optimus");
+	hero2.setPowerOfBlaster(100);
+	hero2.setColor("purple");
+	hero2.fire(); 
+
+	std::ostringstream strs;
+	strs << hero2;
+	std::string s = strs.str();
+
+	EXPECT_EQ(s, "Optimus 100 0 purple");
+}
+
+TEST(Decepticon, CheckOutput) {
+	Decepticon enemy;
+	enemy.setName("Enemy");
+	enemy.fire();
+	enemy.jump();
+	enemy.setLengthOfBlade(20);
+	enemy.setSharpnessOfBlade(300);
+
+	std::ostringstream strs;
+	strs << enemy;
+	std::string s = strs.str();
+
+	EXPECT_EQ(s, "Enemy 300 20");
+}
+
+TEST(Minicon, CheckOutput) {
+	Instrument pickaxe(100, 50);
+
+	Minicon builder("Barak", &pickaxe);
+	builder.setSize(100);
+	builder.setEnergy(1000);
+	builder.work();
+	builder.work();
+
+	std::ostringstream strs;
+	strs << builder;
+	std::string s = strs.str();
+
+	EXPECT_EQ(s, "Barak 1000 100");
 }

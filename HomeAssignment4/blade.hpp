@@ -20,8 +20,8 @@ public:
 	void setSharpness(const uint &sharpness);
 	void setLength(const uint &length);
 
-	uint getSharpness();
-	uint getLength();
+	uint getSharpness() const;
+	uint getLength() const;
 };
 
 

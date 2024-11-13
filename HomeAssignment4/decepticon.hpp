@@ -21,8 +21,10 @@ public:
 	void setSharpnessOfBlade(const uint &sharpnessOfBlade);
 	void setLengthOfBlade(const uint &lengthOfBlade);
 
-	uint getSharpnessOfBlade();
-	uint getLengthOfBlade();
+	uint getSharpnessOfBlade() const;
+	uint getLengthOfBlade() const;
 };
+
+std::ostream& operator<<(std::ostream& os, const Decepticon& dec);
 
 #endif

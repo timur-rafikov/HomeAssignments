@@ -26,10 +26,10 @@ void Blade::setLength(const uint &length) {
 }
 
 
-uint Blade::getSharpness() {
+uint Blade::getSharpness() const {
 	return _sharpness;
 }
 
-uint Blade::getLength() {
+uint Blade::getLength() const {
 	return _length;
 }

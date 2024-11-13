@@ -7,29 +7,29 @@
 #include "blaster.hpp"
 
 Blaster::Blaster(const uint &power, const uint &capacity) :
-	_power(power),
-	_capacity(capacity)
+    _power(power),
+    _capacity(capacity)
 {}
 
 Blaster::Blaster() :
-	Blaster(0, 0)
+    Blaster(0, 0)
 {}
 
 
 
 void Blaster::setPower(const uint &power) {
-	_power = power;
+    _power = power;
 }
 
 void Blaster::setCapacity(const uint &capacity) {
-	_capacity = capacity;
+    _capacity = capacity;
 }
 
 
 uint Blaster::getPower() const {
-	return _power;
+    return _power;
 }
 
 uint Blaster::getCapacity() const {
-	return _capacity;
+    return _capacity;
 }

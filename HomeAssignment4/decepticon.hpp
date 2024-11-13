@@ -12,20 +12,20 @@
 
 class Decepticon: public Transformer {
 private:
-	Blade _sword;
+    Blade _sword;
 public:
-	Decepticon(const std::string &name, const uint &sharpnessOfBlade, const uint &lengthOfBlade);
-	Decepticon(const std::string &name);
-	Decepticon();
+    Decepticon(const std::string &name, const uint &sharpnessOfBlade, const uint &lengthOfBlade);
+    Decepticon(const std::string &name);
+    Decepticon();
 
-	bool operator<(const Decepticon& other) const;
-	bool operator>(const Decepticon& other) const;
+    bool operator<(const Decepticon& other) const;
+    bool operator>(const Decepticon& other) const;
 
-	void setSharpnessOfBlade(const uint &sharpnessOfBlade);
-	void setLengthOfBlade(const uint &lengthOfBlade);
+    void setSharpnessOfBlade(const uint &sharpnessOfBlade);
+    void setLengthOfBlade(const uint &lengthOfBlade);
 
-	uint getSharpnessOfBlade() const;
-	uint getLengthOfBlade() const;
+    uint getSharpnessOfBlade() const;
+    uint getLengthOfBlade() const;
 };
 
 std::ostream& operator<<(std::ostream& os, const Decepticon& dec);

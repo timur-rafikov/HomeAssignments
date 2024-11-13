@@ -11,17 +11,17 @@
 
 class Blaster {
 private:
-	uint _power;
-	uint _capacity;
+    uint _power;
+    uint _capacity;
 public:
-	Blaster(const uint &power, const uint &capacity);
-	Blaster();
+    Blaster(const uint &power, const uint &capacity);
+    Blaster();
 
-	void setPower(const uint &power);
-	void setCapacity(const uint &capacity);
+    void setPower(const uint &power);
+    void setCapacity(const uint &capacity);
 
-	uint getPower() const;
-	uint getCapacity() const;
+    uint getPower() const;
+    uint getCapacity() const;
 };
 
 

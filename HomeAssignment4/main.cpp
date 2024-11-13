@@ -10,77 +10,77 @@
 #include "minicon.hpp"
 
 int main() {
-	/*
-	Transformer hero;
-	hero.fire();
-	hero.jump();
-	hero.setFuel(70);	
-	std::cout << hero << '\n';
+    /*
+    Transformer hero;
+    hero.fire();
+    hero.jump();
+    hero.setFuel(70);
+    std::cout << hero << '\n';
 
-	std::cout << '\n';
+    std::cout << '\n';
 
-	Autobot hero2("Optimus");
-	hero2.setPowerOfBlaster(100);
-	hero2.setColor("purple");
-	hero2.fire(); 
-	std::cout << hero2 << '\n';
-	
-	std::cout << '\n';
+    Autobot hero2("Optimus");
+    hero2.setPowerOfBlaster(100);
+    hero2.setColor("purple");
+    hero2.fire();
+    std::cout << hero2 << '\n';
 
-	Decepticon enemy;
-	enemy.setName("Enemy");
-	enemy.fire();
-	enemy.jump();
-	enemy.setLengthOfBlade(20);
-	enemy.setSharpnessOfBlade(300);
-	std::cout << enemy << '\n';
+    std::cout << '\n';
 
-	std::cout << '\n';
+    Decepticon enemy;
+    enemy.setName("Enemy");
+    enemy.fire();
+    enemy.jump();
+    enemy.setLengthOfBlade(20);
+    enemy.setSharpnessOfBlade(300);
+    std::cout << enemy << '\n';
 
-	Instrument pickaxe(100, 50);
+    std::cout << '\n';
 
-	Minicon builder("Barak", &pickaxe);
-	builder.setSize(100);
-	builder.setEnergy(1000);
-	builder.work();
-	builder.work();
-	std::cout << builder << '\n';
+    Instrument pickaxe(100, 50);
 
-	std::cout << '\n';
-	*/
+    Minicon builder("Barak", &pickaxe);
+    builder.setSize(100);
+    builder.setEnergy(1000);
+    builder.work();
+    builder.work();
+    std::cout << builder << '\n';
 
-	Transformer trans1("cplusplus");
-	trans1.setStrength(1000);
-	Transformer trans2("python");
-	trans2.setStrength(5000);
+    std::cout << '\n';
+    */
 
-	std::cout << (trans1 < trans2) << '\n';
+    Transformer trans1("cplusplus");
+    trans1.setStrength(1000);
+    Transformer trans2("python");
+    trans2.setStrength(5000);
 
-	Autobot atbot1;
-	atbot1.setPowerOfBlaster(100);
-	Autobot atbot2;
-	atbot2.setPowerOfBlaster(200);
+    std::cout << (trans1 < trans2) << '\n';
 
-	std::cout << (atbot1 > atbot2) << '\n';
+    Autobot atbot1;
+    atbot1.setPowerOfBlaster(100);
+    Autobot atbot2;
+    atbot2.setPowerOfBlaster(200);
 
-	Decepticon dec1;
-	dec1.setSharpnessOfBlade(2);
-	dec1.setLengthOfBlade(5);
-	Decepticon dec2;
-	dec2.setSharpnessOfBlade(3);
-	dec2.setLengthOfBlade(3);
+    std::cout << (atbot1 > atbot2) << '\n';
 
-	std::cout << (dec1 > dec2) << '\n';
+    Decepticon dec1;
+    dec1.setSharpnessOfBlade(2);
+    dec1.setLengthOfBlade(5);
+    Decepticon dec2;
+    dec2.setSharpnessOfBlade(3);
+    dec2.setLengthOfBlade(3);
 
-	Instrument pickaxe2(100, 50);
-	Minicon minc1("Barak1", &pickaxe2);
-	minc1.setEnergy(50);
-	minc1.setSize(2);
-	Minicon minc2("Barak2", &pickaxe2);
-	minc2.setEnergy(33);
-	minc2.setSize(3);
+    std::cout << (dec1 > dec2) << '\n';
 
-	std::cout << (minc2 > minc1) << '\n';
+    Instrument pickaxe2(100, 50);
+    Minicon minc1("Barak1", &pickaxe2);
+    minc1.setEnergy(50);
+    minc1.setSize(2);
+    Minicon minc2("Barak2", &pickaxe2);
+    minc2.setEnergy(33);
+    minc2.setSize(3);
 
-	return 0;
+    std::cout << (minc2 > minc1) << '\n';
+
+    return 0;
 }

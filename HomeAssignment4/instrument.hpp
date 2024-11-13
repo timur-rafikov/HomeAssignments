@@ -11,19 +11,19 @@
 
 class Instrument {
 private:
-	uint _endurance;
-	uint _effect;
+    uint _endurance;
+    uint _effect;
 public:
-	Instrument(const uint &endurance, const uint &effect);
-	Instrument();
+    Instrument(const uint &endurance, const uint &effect);
+    Instrument();
 
-	bool use();
+    bool use();
 
-	void setEndurance(const uint &setEndurance);
-	void setEffect(const uint &effect);
+    void setEndurance(const uint &setEndurance);
+    void setEffect(const uint &effect);
 
-	uint getEndurance();
-	uint getEffect();
+    uint getEndurance();
+    uint getEffect();
 };
 
 

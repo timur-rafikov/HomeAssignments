@@ -11,17 +11,17 @@
 
 class Blade {
 private:
-	uint _sharpness;
-	uint _length;
+    uint _sharpness;
+    uint _length;
 public:
-	Blade(const uint &sharpness, const uint &length);
-	Blade();
+    Blade(const uint &sharpness, const uint &length);
+    Blade();
 
-	void setSharpness(const uint &sharpness);
-	void setLength(const uint &length);
+    void setSharpness(const uint &sharpness);
+    void setLength(const uint &length);
 
-	uint getSharpness() const;
-	uint getLength() const;
+    uint getSharpness() const;
+    uint getLength() const;
 };
 
 

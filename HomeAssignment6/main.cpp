@@ -1,3 +1,8 @@
+/* Author: Timur Rafikov
+ * e-mail: st128186@student.spbu.ru
+ * Assignment3: Transformers classes
+ * 18.12.2024
+ */
 #include <iostream>
 #include <vector>
 #include <gtest/gtest.h>
